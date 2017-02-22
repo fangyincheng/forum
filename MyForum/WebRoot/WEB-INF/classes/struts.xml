@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="loginInterceptor" class="interceptor.loginInterceptor">
+				<param name="loginItr">登录拦截器</param>
+			</interceptor>
+		</interceptors>
+		<action name="extra" class="action.ExtraAction">
+			<result name="success" type="redirect">${path}</result>
+			<result name="error" type="redirect">user_common/main.jsp</result>
+			<interceptor-ref name="loginInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="login" class="action.LoginAction" method="write">
+			
+		</action>
+		<action name="register" class="action.RegisterAction" method="write">
+			
+		</action>
+		<action name="main" class="action.MainAction" method="write">
+			
+		</action>
+		<action name="outLogin" class="action.OutLoginAction">
+			<result name="success" type="redirect">login.jsp</result>
+		</action>
+		<action name="selfCard" class="action.SelfCardAction" method="write">
+			
+		</action>
+		<action name="lookReply" class="action.LookReplyAction" method="write">
+			
+		</action>
+		<action name="deleteCard" class="action.DeleteCardAction" method="write">
+			
+		</action>
+		<action name="sendCard" class="action.SendCardAction" method="write">
+			
+		</action>
+		<action name="changeUser" class="action.ChangeUserAction">
+			<result name="success" type="redirect">user_manage/person_change_user.jsp</result>
+			<result name="error" type="redirect">user_common/main.jsp</result>
+			<interceptor-ref name="loginInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="changeSection" class="action.ChangeSectionAction">
+			<result name="success" type="redirect">user_manage/person_change_section.jsp</result>
+		</action>
+		<action name="changePassword" class="action.ChangePasswordAction">
+			<result name="success" type="redirect">user/change_sucess.jsp</result>
+			<result name="error" type="redirect">${path}/person_change_password.jsp</result>
+		</action>
+		<action name="deleteUser" class="action.DeleteUserAction">
+			<result name="success" type="redirectAction">changeUser</result>
+			<result name="error" type="redirect">user_common/main.jsp</result>
+			<interceptor-ref name="loginInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="updateUser" class="action.UpdateUserAction">
+			<result name="success" type="redirectAction">changeUser</result>
+			<result name="error" type="redirect">user_common/main.jsp</result>
+			<interceptor-ref name="loginInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="addUser" class="action.AddUserAction">
+			<result name="success" type="redirectAction">changeUser</result>
+			<result name="error" type="redirect">user_common/main.jsp</result>
+			<interceptor-ref name="loginInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="deleteSection" class="action.DeleteSectionAction">
+			<result name="success" type="redirectAction">changeSection</result>
+			<result name="error" type="redirect">user_common/main.jsp</result>
+			<interceptor-ref name="loginInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="updateSection" class="action.UpdateSectionAction">
+			<result name="success" type="redirectAction">changeSection</result>
+			<result name="error" type="redirect">user_common/main.jsp</result>
+			<interceptor-ref name="loginInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="keepTop" class="action.KeepTopAction" method="write">
+			
+		</action>
+		<action name="replyCard" class="action.ReplyCardAction" method="write">
+			
+		</action>
+		<action name="search" class="action.SearchAction">
+			<result name="success_manage" type="redirect">user_manage/main.jsp</result>
+			<result name="success_common" type="redirect">user_common/main.jsp</result>
+		</action>
+	</package>
+</struts>    

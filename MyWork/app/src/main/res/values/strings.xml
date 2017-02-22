@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">大话IT</string>
+    <string name="login">登陆</string>
+    <string name="register">注册</string>
+    <string name="send">发帖</string>
+    <string name="name">账号/用户名</string>
+    <string name="password">密码</string>
+    <string name="password_sure">确认密码</string>
+    <string name="forget_pw">忘记密码？</string>
+    <string name="visit">游客登陆</string>
+    <string name="reg">注册</string>
+    <string name="look">查看回复</string>
+    <string name="reply">回复</string>
+    <string name="del">删除</string>
+    <string name="top">置顶</string>
+    <string name="title">标题</string>
+    <string name="content">内容</string>
+    <string name="section">版块:</string>
+
+    <string name="all">全部</string>
+    <string name="java">java</string>
+    <string name="C">C/C++</string>
+    <string name="android">安卓</string>
+    <string name="javaEE">javaEE</string>
+    <string name="c">C#</string>
+    <string name="other">其他</string>
+
+    <string name="no_complete">请输入完整！</string>
+    <string name="no_same">两次密码不同！</string>
+</resources>
